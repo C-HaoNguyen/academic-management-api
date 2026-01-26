@@ -1,0 +1,16 @@
+com\example\academic_management_api\controller\AuthController.class
+com\example\academic_management_api\entity\Category.class
+com\example\academic_management_api\entity\Teacher.class
+com\example\academic_management_api\JwtTokenUtil.class
+com\example\academic_management_api\entity\Student.class
+com\example\academic_management_api\JwtAuthFilter.class
+com\example\academic_management_api\entity\Course.class
+com\example\academic_management_api\entity\Enrollment.class
+com\example\academic_management_api\repository\CourseRepository.class
+com\example\academic_management_api\SecurityConfig.class
+com\example\academic_management_api\AcademicManagementApiApplication.class
+com\example\academic_management_api\repository\UserRepository.class
+com\example\academic_management_api\repository\StudentRepository.class
+com\example\academic_management_api\WebConfig.class
+com\example\academic_management_api\entity\User.class
+com\example\academic_management_api\entity\Lesson.class
