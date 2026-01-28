@@ -2,18 +2,18 @@ package com.example.academic_management_api.dto;
 
 public class CategoryDto {
     private Integer categoryId;
-    private String name;
+    private String categoryName;
 
-    public CategoryDto(Integer categoryId, String name) {
+    public CategoryDto(Integer categoryId, String categoryName) {
         this.categoryId = categoryId;
-        this.name = name;
+        this.categoryName = categoryName;
     }
 
     public Integer getCategoryId() {
         return categoryId;
     }
 
-    public String getName() {
-        return name;
+    public String getCategoryName() {
+        return categoryName;
     }
 }
