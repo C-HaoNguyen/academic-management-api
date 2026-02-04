@@ -1,21 +1,21 @@
 package com.example.academic_management_api.dto.auth;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class SignupRequest {
     private String signupUsername;
     private String signupFullName;
     private String signupEmail;
     private String signupPassword;
-    private String signupRole;
 
     public SignupRequest() {
     }
 
-    public SignupRequest(String signupUsername, String signupFullName, String signupEmail, String signupPassword, String signupRole) {
+    public SignupRequest(String signupUsername, String signupFullName, String signupEmail, String signupPassword) {
         this.signupUsername = signupUsername;
         this.signupFullName = signupFullName;
         this.signupEmail = signupEmail;
         this.signupPassword = signupPassword;
-        this.signupRole = signupRole;
     }
 
     public String getSignupUsername() {
@@ -48,13 +48,5 @@ public class SignupRequest {
 
     public void setSignupPassword(String signupPassword) {
         this.signupPassword = signupPassword;
-    }
-
-    public String getSignupRole() {
-        return signupRole;
-    }
-
-    public void setSignupRole(String signupRole) {
-        this.signupRole = signupRole;
     }
 }

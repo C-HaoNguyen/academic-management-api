@@ -1,4 +1,4 @@
-package com.example.academic_management_api;
+package com.example.academic_management_api.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

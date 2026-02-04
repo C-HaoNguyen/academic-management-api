@@ -1,16 +1,11 @@
 package com.example.academic_management_api.controller;
 
-import com.example.academic_management_api.dto.CourseResponseDto;
-import com.example.academic_management_api.entity.Categories;
+import com.example.academic_management_api.dto.course.CourseResponseDto;
 import com.example.academic_management_api.entity.Courses;
-import com.example.academic_management_api.entity.Users;
-import com.example.academic_management_api.repository.CategoryRepository;
 import com.example.academic_management_api.repository.CourseRepository;
-import com.example.academic_management_api.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 

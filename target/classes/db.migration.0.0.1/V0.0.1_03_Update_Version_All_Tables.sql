@@ -122,3 +122,7 @@ create table PAYMENTS (
     foreign key (course_id)
         references COURSES(course_id)
 );
+
+ALTER TABLE users
+ADD CONSTRAINT users_role_check
+CHECK (role IN ('ADMIN', 'INSTRUCTOR', 'STUDENT'));

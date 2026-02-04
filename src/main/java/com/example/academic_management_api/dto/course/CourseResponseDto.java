@@ -1,7 +1,9 @@
-package com.example.academic_management_api.dto;
+package com.example.academic_management_api.dto.course;
+
+import com.example.academic_management_api.dto.CategoryDto;
+import com.example.academic_management_api.dto.InstructorDto;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class CourseResponseDto {

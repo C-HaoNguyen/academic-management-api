@@ -1,4 +1,4 @@
-package com.example.academic_management_api;
+package com.example.academic_management_api.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -45,6 +45,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/**", "/courses/**").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/enrollments/**").hasRole("STUDENT")
                         .anyRequest().authenticated()
                 )
 

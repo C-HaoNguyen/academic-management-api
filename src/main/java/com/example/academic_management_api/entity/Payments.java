@@ -63,4 +63,32 @@ public class Payments {
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
+
+    public void setPaymentId(Integer paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public void setStudent(Users student) {
+        this.student = student;
+    }
+
+    public void setCourse(Courses course) {
+        this.course = course;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
 }
