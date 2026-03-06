@@ -77,8 +77,13 @@ public class AdminController {
     }
 
     @GetMapping("/instructors")
-    public List<Users> getInstructors() {
+    public List<Users> getAllInstructors() {
         return userRepository.findByRole("INSTRUCTOR");
+    }
+
+    @GetMapping("/categories")
+    public List<Categories> getAllCategories() {
+        return categoryRepository.findAll();
     }
 
     @GetMapping("/courses")
