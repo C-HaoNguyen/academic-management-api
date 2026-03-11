@@ -1,10 +1,15 @@
 package com.example.academic_management_api.dto.auth;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 public class SignupRequest {
     private String signupUsername;
     private String signupFullName;
+
+    @NotBlank(message = "Email is required")
+    @Email(message = "Invalid email format")
     private String signupEmail;
     private String signupPassword;
 

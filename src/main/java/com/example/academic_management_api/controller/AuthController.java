@@ -6,6 +6,7 @@ import com.example.academic_management_api.dto.auth.LoginRequest;
 import com.example.academic_management_api.dto.auth.SignupRequest;
 import com.example.academic_management_api.entity.Users;
 import com.example.academic_management_api.repository.UserRepository;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.core.Authentication;
@@ -31,7 +32,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     @ResponseBody
-    public ResponseEntity<?> signup(@RequestBody SignupRequest request) {
+    public ResponseEntity<?> signup(@Valid @RequestBody SignupRequest request) {
         if (userRepository.existsByUsername(request.getSignupUsername())) {
             return ResponseEntity.badRequest().body("Người dùng đã tồn tại. Vui lòng chọn tên khác!");
         }
