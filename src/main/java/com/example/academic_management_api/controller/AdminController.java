@@ -109,6 +109,12 @@ public class AdminController {
                 .orElseThrow(() -> new RuntimeException("Không tìm thấy giảng viên"));
 
         Categories category = null;
+
+        if (request.getCategoryId() == null) {
+            return ResponseEntity.badRequest()
+                    .body("Danh mục không được để trống");
+        }
+
         if (request.getCategoryId() != null) {
             category = categoryRepository.findById(request.getCategoryId())
                     .orElseThrow(() -> new RuntimeException("Không tìm thấy danh mục"));
@@ -137,8 +143,8 @@ public class AdminController {
         userRepository.deleteById(user.getUserId());
     }
 
-    @DeleteMapping("/deleted-course")
-    public void deleteCourse(@RequestBody Courses course) {
-        courseRepository.deleteById(course.getCourseId());
+    @DeleteMapping("/deleted-course/{courseId}")
+    public void deleteCourse(@PathVariable Integer courseId) {
+        courseRepository.deleteById(courseId);
     }
 }
